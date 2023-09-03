@@ -1,0 +1,10 @@
+-- database: /Users/jonathanquartin/Documents/Coding/pitchfork/database.sqlite
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+SELECT * FROM "reviews";
+
+SELECT reviews.reviewid, reviews.author, reviews.pub_year, content.content, reviews.score
+FROM reviews
+INNER JOIN content
+ON reviews.reviewid = content.reviewid;
